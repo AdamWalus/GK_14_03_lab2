@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>Canvas Graphics</title>
+<script>
+var canvas; // DOM object corresponding to the canvas
+var graphics; // 2D graphics context for drawing on the canvas
+function draw() {
+// draw on the canvas, using the graphics context
+graphics.fillText("Hello World", 30, 20);
+}
+function init() {
+canvas = document.getElementById("theCanvas");
+graphics = canvas.getContext("2d");
+draw(); // draw something on the canvas
+}
+</script>
 </head>
-<body>
-    
+<body onload="init()">
+<canvas id="theCanvas" width="640" height="480"></canvas>
 </body>
 </html>
