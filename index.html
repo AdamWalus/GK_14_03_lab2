@@ -7,7 +7,28 @@ var canvas; // DOM object corresponding to the canvas
 var graphics; // 2D graphics context for drawing on the canvas
 function draw() {
 // draw on the canvas, using the graphics context
-graphics.fillText("Hello World", 30, 20);
+
+
+  graphics.beginPath();
+  graphics.arc(canvas.width/2, canvas.height/2, 150, Math.PI, 0);
+  graphics.fillStyle = "#EE7E33";
+  graphics.fill();
+  graphics.closePath();
+
+
+  graphics.beginPath();
+  graphics.arc(canvas.width/2 - 40, canvas.height/2 - 90, 15, 0, 2*Math.PI); // pierwsze koło
+  graphics.fillStyle = "#FFFFff";
+  graphics.fill();
+  graphics.closePath();
+
+  graphics.beginPath();
+  graphics.arc(canvas.width/2 + 40, canvas.height/2 - 90, 15, 0, 2*Math.PI); // drugie koło
+  graphics.fillStyle = "#ffffff";
+  graphics.fill();
+  graphics.closePath();
+
+  
 }
 function init() {
 canvas = document.getElementById("theCanvas");
