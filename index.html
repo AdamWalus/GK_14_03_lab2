@@ -9,26 +9,100 @@ function draw() {
 // draw on the canvas, using the graphics context
 
 
-  graphics.beginPath();
-  graphics.arc(canvas.width/2, canvas.height/2, 150, Math.PI, 0);
-  graphics.fillStyle = "#EE7E33";
-  graphics.fill();
-  graphics.closePath();
+   
+    graphics.beginPath();
+    graphics.arc(canvas.width / 2, canvas.height / 2, 150, Math.PI, 0);
+    graphics.strokeStyle = "#000000";
+    graphics.lineWidth = 5;
+    graphics.stroke();
+    graphics.closePath();
+
+    graphics.beginPath();
+    graphics.arc(canvas.width / 2, canvas.height / 2, 150, Math.PI, 0);
+    graphics.fillStyle = "#EE7E33";
+    graphics.fill();
+    graphics.closePath();
+
+    graphics.beginPath();
+    graphics.arc(canvas.width / 2 - 40, canvas.height / 2 - 90, 15, 0, 2 * Math.PI); // pierwsze koło
+    graphics.fillStyle = "#FFFFff";
+    graphics.fill();
+    graphics.closePath();
+
+    graphics.beginPath();
+    graphics.arc(canvas.width / 2 + 40, canvas.height / 2 - 90, 15, 0, 2 * Math.PI); // drugie koło
+    graphics.fillStyle = "#ffffff";
+    graphics.fill();
+    graphics.closePath();
+
+    graphics.beginPath();
+    graphics.arc(canvas.width / 2 - 40, canvas.height / 2 - 90, 10, 0, 2 * Math.PI); // pierwsze koło - czarne
+    graphics.fillStyle = "#000000";
+    graphics.fill();
+    graphics.closePath();
+
+    graphics.beginPath();
+    graphics.arc(canvas.width / 2 + 40, canvas.height / 2 - 90, 10, 0, 2 * Math.PI); // drugie koło - czarne
+    graphics.fillStyle = "#000000";
+    graphics.fill();
+    graphics.closePath();
+
+    graphics.beginPath();
+    graphics.arc(canvas.width / 2 - 40 - 5, canvas.height / 2 - 90 - 5, 3, 0, 2 * Math.PI); // pierwsze koło - biała kropka
+    graphics.fillStyle = "#FFFFFF";
+    graphics.fill();
+    graphics.closePath();
+
+    graphics.beginPath();
+    graphics.arc(canvas.width / 2 + 40 - 5, canvas.height / 2 - 90 - 5, 3, 0, 2 * Math.PI); // drugie koło - biała kropka
+    graphics.fillStyle = "#FFFFFF";
+    graphics.fill();
+    graphics.closePath();
+
+    graphics.beginPath();
+    graphics.arc(canvas.width/2 - 0, canvas.height/2 - 40, 25, 0, 1*Math.PI); // pierwszy łuk
+    graphics.fillStyle = "#000000";
+    graphics.fill();
+    graphics.closePath();
 
 
-  graphics.beginPath();
-  graphics.arc(canvas.width/2 - 40, canvas.height/2 - 90, 15, 0, 2*Math.PI); // pierwsze koło
-  graphics.fillStyle = "#FFFFff";
-  graphics.fill();
-  graphics.closePath();
+    graphics.beginPath();
+    graphics.moveTo(canvas.width / 2 -30, canvas.height / 2 + -30);
+    graphics.lineTo(canvas.width / 2 - 20, canvas.height / 2 + -45);
+    graphics.strokeStyle = "#000000";
+    graphics.lineWidth = 2;
+    graphics.stroke();
+    graphics.closePath();
 
-  graphics.beginPath();
-  graphics.arc(canvas.width/2 + 40, canvas.height/2 - 90, 15, 0, 2*Math.PI); // drugie koło
-  graphics.fillStyle = "#ffffff";
-  graphics.fill();
-  graphics.closePath();
+    graphics.beginPath();
+    graphics.moveTo(canvas.width / 2 - -30, canvas.height / 2 + -30);
+    graphics.lineTo(canvas.width / 2 - -20, canvas.height / 2 + -45);
+    graphics.strokeStyle = "#000000";
+    graphics.lineWidth = 2;
+    graphics.stroke();
+    graphics.closePath();
 
-  
+
+    graphics.beginPath();
+    graphics.strokeStyle = "#000000"; // ustawienie koloru obramowania na czarny
+    graphics.lineWidth = 1; // ustawienie szerokości obramowania na 1 piksel
+    graphics.rect(canvas.width / 2 - 10, canvas.height / 2 - 39.6, 10, 10); // pierwszy prostokąt
+    graphics.fillStyle = "#fff";
+    graphics.fill();
+    graphics.stroke(); // rysowanie obramowania
+    graphics.closePath();
+
+    graphics.beginPath();
+    graphics.strokeStyle = "#000000"; // ustawienie koloru obramowania na czarny
+    graphics.lineWidth = 1; // ustawienie szerokości obramowania na 1 piksel
+    graphics.rect(canvas.width / 2 + 0, canvas.height / 2 - 39.6, 10, 10); // drugi prostokąt
+    graphics.fillStyle = "#fff";
+    graphics.fill();
+    graphics.stroke(); // rysowanie obramowania
+    graphics.closePath();
+
+
+
 }
 function init() {
 canvas = document.getElementById("theCanvas");
