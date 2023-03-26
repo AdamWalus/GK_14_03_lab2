@@ -9,7 +9,7 @@ function draw() {
 // draw on the canvas, using the graphics context
 
 
-   
+   //górna część obramowania
     graphics.beginPath();
     graphics.arc(canvas.width / 2, canvas.height / 2, 150, Math.PI, 0);
     graphics.strokeStyle = "#000000";
@@ -23,6 +23,18 @@ function draw() {
     graphics.fill();
     graphics.closePath();
 
+
+    //dolna część obramowania
+    graphics.beginPath();
+    graphics.moveTo(canvas.width / 2 - 152, canvas.height / 2);
+    graphics.lineTo(canvas.width / 2 + 152, canvas.height / 2);
+    graphics.strokeStyle = "#000000";
+    graphics.lineWidth = 3;
+    graphics.stroke();
+    graphics.closePath();
+
+
+    //OCZY
     graphics.beginPath();
     graphics.arc(canvas.width / 2 - 40, canvas.height / 2 - 90, 15, 0, 2 * Math.PI); // pierwsze koło
     graphics.fillStyle = "#FFFFff";
@@ -59,15 +71,18 @@ function draw() {
     graphics.fill();
     graphics.closePath();
 
+
+    //USTA
     graphics.beginPath();
-    graphics.arc(canvas.width/2 - 0, canvas.height/2 - 40, 25, 0, 1*Math.PI); // pierwszy łuk
+    graphics.arc(canvas.width/2 - 0, canvas.height/2 - 40, 25, 0, 1*Math.PI); //  łuk
     graphics.fillStyle = "#000000";
     graphics.fill();
     graphics.closePath();
 
 
+    //Część ust (boczne kąciki)
     graphics.beginPath();
-    graphics.moveTo(canvas.width / 2 -30, canvas.height / 2 + -30);
+    graphics.moveTo(canvas.width / 2 - 30, canvas.height / 2 + -30);
     graphics.lineTo(canvas.width / 2 - 20, canvas.height / 2 + -45);
     graphics.strokeStyle = "#000000";
     graphics.lineWidth = 2;
