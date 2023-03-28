@@ -8,62 +8,60 @@ var graphics; // 2D graphics context for drawing on the canvas
 function draw() {
 // draw on the canvas, using the graphics context
 
-
-   //górna część obramowania
+    // górna część obramowania - rysowanie łuku
     graphics.beginPath();
     graphics.arc(canvas.width / 2, canvas.height / 2, 150, Math.PI, 0);
-    graphics.strokeStyle = "#000000";
-    graphics.lineWidth = 5;
-    graphics.stroke();
+    graphics.strokeStyle = "#000000"; // ustawienie koloru obramowania na czarny
+    graphics.lineWidth = 5; // ustawienie szerokości obramowania na 5 pikseli
+    graphics.stroke(); // rysowanie obramowania
     graphics.closePath();
 
     graphics.beginPath();
     graphics.arc(canvas.width / 2, canvas.height / 2, 150, Math.PI, 0);
-    graphics.fillStyle = "#EE7E33";
-    graphics.fill();
+    graphics.fillStyle = "#EE7E33"; // ustawienie koloru wypełnienia na pomarańczowy
+    graphics.fill(); // wypełnienie łuku
     graphics.closePath();
 
-
-    //dolna część obramowania
+    // dolna część obramowania - rysowanie linii
     graphics.beginPath();
     graphics.moveTo(canvas.width / 2 - 152, canvas.height / 2);
     graphics.lineTo(canvas.width / 2 + 152, canvas.height / 2);
-    graphics.strokeStyle = "#000000";
-    graphics.lineWidth = 3;
-    graphics.stroke();
+    graphics.strokeStyle = "#000000"; // ustawienie koloru obramowania na czarny
+    graphics.lineWidth = 3; // ustawienie szerokości obramowania na 3 piksele
+    graphics.stroke(); // rysowanie obramowania
     graphics.closePath();
 
-
-    //OCZY
+    // OCZY - rysowanie dwóch kół
     graphics.beginPath();
     graphics.arc(canvas.width / 2 - 40, canvas.height / 2 - 90, 15, 0, 2 * Math.PI); // pierwsze koło
-    graphics.fillStyle = "#FFFFff";
-    graphics.fill();
+    graphics.fillStyle = "#FFFFff"; // ustawienie koloru wypełnienia na biały
+    graphics.fill(); // wypełnienie koła
     graphics.closePath();
 
     graphics.beginPath();
     graphics.arc(canvas.width / 2 + 40, canvas.height / 2 - 90, 15, 0, 2 * Math.PI); // drugie koło
-    graphics.fillStyle = "#ffffff";
-    graphics.fill();
+    graphics.fillStyle = "#ffffff"; // ustawienie koloru wypełnienia na biały
+    graphics.fill(); 
     graphics.closePath();
 
     graphics.beginPath();
     graphics.arc(canvas.width / 2 - 40, canvas.height / 2 - 90, 10, 0, 2 * Math.PI); // pierwsze koło - czarne
-    graphics.fillStyle = "#000000";
-    graphics.fill();
+    graphics.fillStyle = "#000000"; // ustawienie koloru wypełnienia na czarny
+    graphics.fill(); 
     graphics.closePath();
 
     graphics.beginPath();
     graphics.arc(canvas.width / 2 + 40, canvas.height / 2 - 90, 10, 0, 2 * Math.PI); // drugie koło - czarne
-    graphics.fillStyle = "#000000";
-    graphics.fill();
+    graphics.fillStyle = "#000000"; // ustawienie koloru wypełnienia na czarny
+    graphics.fill(); 
     graphics.closePath();
 
     graphics.beginPath();
     graphics.arc(canvas.width / 2 - 40 - 5, canvas.height / 2 - 90 - 5, 3, 0, 2 * Math.PI); // pierwsze koło - biała kropka
-    graphics.fillStyle = "#FFFFFF";
-    graphics.fill();
+    graphics.fillStyle = "#FFFFFF"; // ustawienie koloru wypełnienia na biały
+    graphics.fill(); 
     graphics.closePath();
+
 
     graphics.beginPath();
     graphics.arc(canvas.width / 2 + 40 - 5, canvas.height / 2 - 90 - 5, 3, 0, 2 * Math.PI); // drugie koło - biała kropka
@@ -82,7 +80,7 @@ function draw() {
 
     //Część ust (boczne kąciki)
     graphics.beginPath();
-    graphics.moveTo(canvas.width / 2 - 30, canvas.height / 2 + -30);
+    graphics.moveTo(canvas.width / 2 - 30, canvas.height / 2 + -30);//Rysowanie linii
     graphics.lineTo(canvas.width / 2 - 20, canvas.height / 2 + -45);
     graphics.strokeStyle = "#000000";
     graphics.lineWidth = 2;
@@ -104,7 +102,7 @@ function draw() {
     graphics.rect(canvas.width / 2 - 10, canvas.height / 2 - 39.6, 10, 10); // pierwszy prostokąt
     graphics.fillStyle = "#fff";
     graphics.fill();
-    graphics.stroke(); // rysowanie obramowania
+    graphics.stroke();
     graphics.closePath();
 
     graphics.beginPath();
